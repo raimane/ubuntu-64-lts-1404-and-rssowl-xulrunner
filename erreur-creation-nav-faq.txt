@@ -1,0 +1,19 @@
+RSSOwl fails to create a Browser for reading news (Linux)!
+
+Note: Beginning with RSSOwl 2.1, a new logic was implemented to find a browser to use within RSSOwl. The steps are as follows:
+
+First try the OS configured browser if present
+Second, use the browser that is specified from the -Dorg.eclipse.swt.browser.XULRunnerPath argument if provided
+Third, try to use the browser that is bundled with RSSOwl
+If the error persists even with RSSOwl 2.1, follow these instructions to manually install a browser to use with RSSOwl:
+This error can be seen on Linux where RSSOwl tries to create an embedded Browser for reading news, but fails. RSSOwl is relying on a proper XULRunner version to be installed. Please make sure to have XULRunner 1.9.2.x installed on your system. RSSOwl can not use XULRunner 2 and above. XULRunner 2 was first introduced with Firefox 4 in 2011. Instructions:
+Download XULRunner 1.9 Runtime
+Extract it to any directory that RSSOwl can read
+Add a new startup property to rssowl named -Dorg.eclipse.swt.browser.XULRunnerPath=[XULRunner Runtime Directory]
+Start RSSOwl and it will pick up the browser from the provided location
+Please refer to this FAQ entry how to start RSSOwl with parameters like that.
+How can I get the best performance out of RSSOwl?
+
+If RSSOwl is running slow for you or RSSOwl suddenly stopped working because your computer was running low on memory, here are some Tips and Tricks that will likely help you.
+
+ 
